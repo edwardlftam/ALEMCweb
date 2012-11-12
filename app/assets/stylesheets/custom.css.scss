@@ -1,0 +1,21 @@
+body {
+  .head {
+    background-color: skyblue;
+    color: navy;
+    padding: 20px;
+  }
+  .nav_menu {
+    
+  }
+  .footer {
+    background-color: skyblue;
+    color: navy;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}

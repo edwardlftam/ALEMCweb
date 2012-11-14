@@ -4,8 +4,21 @@ body {
     color: navy;
     padding: 20px;
   }
-  .nav_menu {
-    
+  .nav_wrapper {
+    background: navy;
+    font-size: 20px;
+    .nav_menu {
+      text-align: center;
+      color: white;
+      .nav_button {
+        display: inline-block;
+        padding: 10px 20px 10px 20px;
+        &:hover{
+	  color: skyblue;
+	  cursor: pointer;
+	}
+      }
+    }
   }
   .footer {
     background-color: skyblue;

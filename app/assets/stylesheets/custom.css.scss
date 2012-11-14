@@ -29,6 +29,14 @@ body {
     .container {
       padding: 20px;
       text-align: center;
+      .footer_button {
+        cursor: pointer;
+        display: inline-block;
+	&:hover {
+	  color: aliceblue;  
+	}
+      }
     }
+
   }
 }

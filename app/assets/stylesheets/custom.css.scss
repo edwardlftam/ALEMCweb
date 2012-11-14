@@ -3,6 +3,9 @@ body {
     background-color: skyblue;
     color: navy;
     padding: 20px;
+    .logo {
+      cursor: pointer;
+    }
   }
   .nav_wrapper {
     background: navy;

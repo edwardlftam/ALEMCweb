@@ -5,6 +5,7 @@ class App.Routers.Application extends Backbone.Router
     'fellowships': 'loadFellowships'
     'events': 'loadEvents'
     'news': 'loadNews'
+    'contact': 'loadContact'
   default:=>
     new App.Views.Application.Layout
   loadAboutUs:=>
@@ -14,4 +15,6 @@ class App.Routers.Application extends Backbone.Router
   loadEvents:=>
     @default()
   loadNews:=>
+    @default()
+  loadContact:=>
     @default()

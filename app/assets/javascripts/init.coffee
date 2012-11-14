@@ -21,3 +21,7 @@ window.NavData =
     className:'news'
     name:'News'
     url:'/#news'
+  Contact:
+    className:'contact'
+    name:'Contact'
+    url:'/#contact'

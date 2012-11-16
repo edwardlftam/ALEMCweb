@@ -7,21 +7,21 @@ window.App =
 window.NavData =
   AboutUs:
     className:'about_us'
-    name: 'About Us'
+    name: '關於我們'
     url:'/#about_us'
   Events:
     className:'events'
-    name:'Events'
+    name:'活動'
     url:'/#events'
   Fellowships:
     className:'fellowships'
-    name:'Fellowships'
+    name:'聚會'
     url:'/#fellowships'
   News:
     className:'news'
-    name:'News'
+    name:'報告事項'
     url:'/#news'
   Contact:
-    className:'contact'
-    name:'Contact'
+    className:''
+    name:'聯絡'
     url:'/#contact'

@@ -6,7 +6,7 @@ class App.Views.Application.Head extends Backbone.View
   render:->
     template = '''
       <div class="container">
-        <h1 class="logo"><b>ALEMC</b></h1>
+        <h1 class="logo"><b>豐盛生命教會 ALEMC</b></h1>
       </div>
     '''
     html = Mustache.render template, null

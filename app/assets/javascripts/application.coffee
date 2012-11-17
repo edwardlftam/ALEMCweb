@@ -9,5 +9,6 @@
 #= require_tree ./routers
 
 $ ->
-  new App.Routers.Application
+  new App.Views.Application.Layout
+  new App.Routers.Application.Page
   Backbone.history.start()

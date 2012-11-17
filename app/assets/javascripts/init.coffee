@@ -1,10 +1,15 @@
 window.App = 
   Views: 
     Application: {}
+    Home: {}
   Routers:
     Application: {}
 
 window.NavData =
+  Home:
+  	className:'home'
+  	name:'首頁'
+  	url:''
   AboutUs:
     className:'about_us'
     name: '關於我們'
@@ -22,6 +27,6 @@ window.NavData =
     name:'報告事項'
     url:'/#news'
   Contact:
-    className:''
+    className:'contact'
     name:'聯絡'
     url:'/#contact'

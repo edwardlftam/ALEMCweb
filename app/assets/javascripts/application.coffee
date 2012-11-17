@@ -4,7 +4,6 @@
 #= require lib/backbone
 #= require lib/mustache
 #= require_tree ./views
-#= require_tree ./collections
 #= require_tree ./models
 #= require_tree ./routers
 

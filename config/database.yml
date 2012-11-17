@@ -21,7 +21,7 @@ test:
   password: root
 
 production:
-  adapter: 'mysql2'
+  adapter: 'pg'
   database: ALEMC_production
   pool: 5
   timeout: 5000

@@ -9,6 +9,7 @@ group :development do
   gem 'mysql2'
 end
 
+gem 'bcrypt-ruby'
 gem 'haml'
 gem 'rabl'
 gem 'sprockets', '~> 2.0'

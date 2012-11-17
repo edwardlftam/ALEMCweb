@@ -1,6 +1,6 @@
 class App.Views.Home.Index extends Backbone.View
   initialize:->
-    @pic_urls = ["/assets/home1.jpg", "/assets/home2.jpg"]
+    @pic_urls = ["/assets/home1_small.jpg", "/assets/home2_small.jpg"]
     @numberOfPictures = @pic_urls.length
     @next_pic = 1
     @render()
@@ -8,7 +8,7 @@ class App.Views.Home.Index extends Backbone.View
   render:=>
     template = '''
       <div class="home_img">
-        <img src="/assets/home1.jpg" />
+        <img src="/assets/home1_small.jpg" />
       </div>
       <div class="top_news"></div>
       <div class="top_events"></div>

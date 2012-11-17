@@ -10,5 +10,5 @@
 
 $ ->
   new App.Views.Application.Layout
-  new App.Routers.Application.Page
+  new App.Routers.Application.Page()
   Backbone.history.start()

@@ -13,6 +13,7 @@ gem 'bcrypt-ruby'
 gem 'haml'
 gem 'rabl'
 gem 'sprockets', '~> 2.0'
+gem 'annotate'
 
 # Gems used only for assets and not required
 # in production environments by default.

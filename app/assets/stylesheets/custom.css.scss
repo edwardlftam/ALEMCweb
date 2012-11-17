@@ -24,9 +24,33 @@ body {
     }
   }
 
+  .content {
+    margin-bottom: 200px;
+  }
+  
   .home_img {
     margin: 30px;
     text-align: center;
+  }
+
+  .login_bar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: white;
+    border-radius: 0px 0px 0px 5px;
+    background: black;
+    .login_button {
+     margin: 5px 25px 5px 25px; 
+     position: relative;
+     display: inline-block; 
+     cursor: pointer;
+     &:hover {
+       text-decoration: underline;
+       color: skyblue;
+     }
+    }
+
   }
 
   .footer {

@@ -14,7 +14,6 @@ class App.Views.Home.Index extends Backbone.View
       <div class="top_events"></div>
 
     '''
-    console.log "hello there"
     html = Mustache.render template, null
     $(@el).append html
   toggle_pic:=>

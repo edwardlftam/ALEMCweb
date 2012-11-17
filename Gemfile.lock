@@ -28,6 +28,8 @@ GEM
     activesupport (3.2.8)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    annotate (2.5.0)
+      rake
     arel (3.0.2)
     bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.0.4.0)
@@ -110,6 +112,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  annotate
   bcrypt-ruby
   bootstrap-sass (= 2.0.4)
   coffee-rails (~> 3.2.1)

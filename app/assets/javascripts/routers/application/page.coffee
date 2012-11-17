@@ -1,5 +1,5 @@
 class App.Routers.Application.Page extends Backbone.Router
-	routes:
+  routes:
     '': 'loadHome'
     'about_us': 'loadAboutUs'
     'fellowships': 'loadFellowships'

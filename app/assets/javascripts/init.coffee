@@ -2,6 +2,7 @@ window.App =
   Views: 
     Application: {}
     Home: {}
+    Login: {}
   Routers:
     Application: {}
 

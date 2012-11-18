@@ -6,6 +6,7 @@ class App.Routers.Application.Page extends Backbone.Router
     'events': 'loadEvents'
     'news': 'loadNews'
     'contact': 'loadContact'
+    'login':'loadLogin'
   loadHome:=>
     new App.Views.Home.Index el:'.content-body'
   loadAboutUs:=>
@@ -13,3 +14,5 @@ class App.Routers.Application.Page extends Backbone.Router
   loadEvents:=>
   loadNews:=>
   loadContact:=>
+  loadLogin:=>
+    new App.Views.Login.Index el:'.content-body'

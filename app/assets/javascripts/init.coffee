@@ -3,6 +3,7 @@ window.App =
     Application: {}
     Home: {}
     Login: {}
+    CreateAccount: {}
   Routers:
     Application: {}
 

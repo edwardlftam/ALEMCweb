@@ -7,6 +7,7 @@ class App.Routers.Application.Page extends Backbone.Router
     'news': 'loadNews'
     'contact': 'loadContact'
     'login':'loadLogin'
+    'create_account': 'loadCreateAccount'
   loadHome:=>
     new App.Views.Home.Index el:'.content-body'
   loadAboutUs:=>
@@ -16,3 +17,6 @@ class App.Routers.Application.Page extends Backbone.Router
   loadContact:=>
   loadLogin:=>
     new App.Views.Login.Index el:'.content-body'
+  loadCreateAccount:=>
+    console.log "hihihih"
+    new App.Views.CreateAccount.Index el:'.content-body' 

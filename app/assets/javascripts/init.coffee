@@ -6,7 +6,9 @@ window.App =
     CreateAccount: {}
   Routers:
     Application: {}
-
+  Models: 
+    User: {}
+  Collections: {}
 window.NavData =
   Home:
   	className:'home'

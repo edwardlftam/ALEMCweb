@@ -4,13 +4,15 @@ class UsersController < ApplicationController
     email                 = params[:email]
     password              = params[:password]
     password_confirmation = params[:password_confirmation]
-    
 
     @user = User.new username:username, email:email, password:password, password_confirmation:password_confirmation
+    @messages = Array.new 
     if @user.save
-      @message = 'Registered'
+      @messages.push "Registered."
+      @status = "success"
     else
-      @message = 'Error Occurred'
+      @messages = @user.errors.full_messages 
+      @status = "error"
     end
   end
 end

@@ -1,4 +1,6 @@
 body {
+  overflow-x: hidden;
+  overflow-y: hidden;
   .head {
     background-color: skyblue;
     color: navy;
@@ -29,33 +31,47 @@ body {
   }
 
   .login_form {
-    width: 20%;
-    height: 25%;
-    padding: 40 100 40 100;
+    width: 400px; 
+    margin: 150px 50px 100px 150px;
   }
 
+
   .create_account_form {
-    width: 20%;
-    height: 35%;
-    padding: 40 100 40 100;
+    width: 500px;
+    margin: 100px 50px 100px 100px;
   }
 
   .login_form, .create_account_form {
     position: absolute;
     font-size: 1.3em;
     color: navy;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    margin: auto;
     border: navy solid 2px;
     border-radius: 20px;
     box-shadow: 10px 10px 5px black;
-
+    padding: 40 100 40 100;
     h1 {
       display: inline-block;
       padding: 10 10 10 0;
+    }
+  
+    .message_box {
+      padding: 20px;
+      margin: 10 0 10 0;
+      border-radius: 10px;
+      border: 2px solid;
+
+
+    }
+
+    .error {
+      color: red;
+      border-color: red;
+      background: pink;
+    }
+    .success {
+      color: green;
+      border-color: green;
+      background: lightgreen;
     }
   }
 
@@ -67,6 +83,7 @@ body {
   .submit {
     display: inline-block;
     border-radius: 5px;
+    margin-top: 10px;
     padding: 5 10 5 10;
     background-color: navy;
     background-image: -webkit-gradient(linear, bottom, top, from(navy), to(skyblue)); 

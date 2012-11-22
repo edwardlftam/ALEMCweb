@@ -2,12 +2,15 @@ class App.Views.CreateAccount.Index extends Backbone.View
   events:
     'click .submit':'try_submit'
   initialize:->
+    @model = new App.Models.User 
+    @model.bind 'change', @post_save
     @render()
+    @hide_message_box()
   render:=>
     template = '''
       <div class="create_account_form">
         <h1>Create an Account</h1>
-	<div class="message"></div>
+	<div class="message_box"></div>
 	<p>Username:</p>
 	<input type="text" class="username form_input" />
 	<p>Email Address: </p>
@@ -23,8 +26,6 @@ class App.Views.CreateAccount.Index extends Backbone.View
     html = Mustache.render template, null
     $(@el).html html
   try_submit:=>
-    console.log "try_submit"
-    @model = new App.Models.User 
     username              = $('.username').val()
     email                 = $('.email').val()
     password              = $('.password').val()
@@ -34,16 +35,21 @@ class App.Views.CreateAccount.Index extends Backbone.View
       email                 : email
       password              : password
       password_confirmation : password_confirmation
-      success               : @handle_success
-      error                 : @handle_error
-  handle_success:=>
-    message = 'Registered.'
-    $('.message').addClass 'success'
-    $('.message').html message
-    @empty_form_inputs()
+  post_save:=>
+    @empty_message_box()
+    status = @model.status
+    messages = @model.messages
+    $('.message_box').addClass @model.status
+    _.each @model.messages, (message)->
+      html = '<div class="message">' + message + '</div>'
+      $('.message_box'). append html 
+    @empty_form_inputs() if status is  "success" 
+    @show_message_box()
   empty_form_inputs:=>
     $('.form_input').val ''
-  handle_error:=>
-    message = 'An error has occurred.'
-    $('.message').addClass 'error'
-    $('.message').html message
+  empty_message_box:=>
+    $('.message_box').empty()
+  hide_message_box:=>
+    $('.message_box').hide()
+  show_message_box:=>
+    $('.message_box').show()

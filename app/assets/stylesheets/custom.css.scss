@@ -1,6 +1,6 @@
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
   .head {
     background-color: skyblue;
     color: navy;
@@ -27,7 +27,7 @@ body {
   }
 
   .content {
-    margin-bottom: 200px;
+    height: 100%;
   }
 
   .login_form {
@@ -128,8 +128,7 @@ body {
   .footer {
     background-color: skyblue;
     color: navy;
-    position: fixed;
-    bottom: 0px;
+    position: inherit;
     width: 100%;
     .container {
       padding: 20px;

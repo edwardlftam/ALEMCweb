@@ -37,6 +37,7 @@ class App.Views.CreateAccount.Index extends Backbone.View
       password_confirmation : password_confirmation
   post_save:=>
     @empty_message_box()
+    @remove_message_type()
     status = @model.status
     messages = @model.messages
     $('.message_box').addClass @model.status
@@ -53,3 +54,6 @@ class App.Views.CreateAccount.Index extends Backbone.View
     $('.message_box').hide()
   show_message_box:=>
     $('.message_box').show()
+  remove_message_type:=>
+    $('.message_box').removeClass 'success'
+    $('.message_box').removeClass 'error'

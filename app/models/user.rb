@@ -2,15 +2,16 @@
 #
 # Table name: users
 #
-#  id               :integer          not null, primary key
-#  username         :string(255)
-#  email            :string(255)
-#  password         :string(255)
-#  password_confirm :string(255)
-#  password_digest  :string(255)
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
-#  administrator    :boolean
+#  id                    :integer          not null, primary key
+#  username              :string(255)
+#  email                 :string(255)
+#  password              :string(255)
+#  password_digest       :string(255)
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#  administrator         :boolean
+#  password_confirmation :string(255)
+#  remeber_token         :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -25,5 +26,10 @@ class User < ActiveRecord::Base
  
   validates :password, presence:true, length: { minimum: 6 } 
   validates :password_confirmation, presence:true
+  before_save :create_remember_token
 
+  private
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 end

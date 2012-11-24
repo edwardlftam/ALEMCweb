@@ -10,7 +10,7 @@ class App.Views.CreateAccount.Index extends Backbone.View
     template = '''
       <div class="create_account_form">
         <h1>Create an Account</h1>
-	<div class="message_box"></div>
+	<div class="create_account message_box"></div>
 	<p>Username:</p>
 	<input type="text" class="username form_input" />
 	<p>Email Address: </p>
@@ -43,7 +43,7 @@ class App.Views.CreateAccount.Index extends Backbone.View
     $('.message_box').addClass @model.status
     _.each @model.messages, (message)->
       html = '<div class="message">' + message + '</div>'
-      $('.message_box'). append html 
+      $('.create_account.message_box'). append html 
     @empty_form_inputs() if status is  "success" 
     @show_message_box()
   empty_form_inputs:=>

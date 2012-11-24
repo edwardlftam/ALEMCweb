@@ -6,7 +6,7 @@ class App.Views.Application.Login extends Backbone.View
     @render()
   render:=> 
     template = '''
-      <div class="login login_button">Log in</div> | <div class="create_account login_button">Create an account</div>
+      <div class="login bar_button">Log in</div> | <div class="create_account bar_button">Create an account</div>
     '''
     html = Mustache.render template, null
     $(@el).html html

@@ -3,6 +3,7 @@
 #= require lib/underscore
 #= require lib/backbone
 #= require lib/mustache
+#= require lib/jquery-cookie
 #= require_tree ./collections
 #= require_tree ./views
 #= require_tree ./models

@@ -1,9 +1,8 @@
 class App.Views.CreateAccount.Index extends Backbone.View
   events:
-    'click .submit':'try_submit'
+    'click .create_accoutn.submit':'try_submit'
   initialize:->
     @model = new App.Models.User 
-    @model.bind 'change', @post_save
     @render()
     @hide_message_box()
   render:=>
@@ -20,21 +19,19 @@ class App.Views.CreateAccount.Index extends Backbone.View
 	<p>Confirm Password: </p>
 	<input type="password" class="password_confirmation form_input" />
 	<br/>
-        <div class="submit">submit</div>
+        <div class="create_accoutn submit">submit</div>
       </div>
     '''
     html = Mustache.render template, null
     $(@el).html html
   try_submit:=>
-    username              = $('.username').val()
-    email                 = $('.email').val()
-    password              = $('.password').val()
-    password_confirmation = $('.password_confirmation').val()
-    @model.save
-      username              : username
-      email                 : email
-      password              : password
-      password_confirmation : password_confirmation
+    data =
+      username              : $('.username').val()
+      email                 : $('.email').val()
+      password              : $('.password').val()
+      password_confirmation : $('.password_confirmation').val()
+    @model.save data,
+      success: @post_save
   post_save:=>
     @empty_message_box()
     @remove_message_type()
@@ -49,11 +46,11 @@ class App.Views.CreateAccount.Index extends Backbone.View
   empty_form_inputs:=>
     $('.form_input').val ''
   empty_message_box:=>
-    $('.message_box').empty()
+    $('.create_account.message_box').empty()
   hide_message_box:=>
-    $('.message_box').hide()
+    $('.create_account.message_box').hide()
   show_message_box:=>
-    $('.message_box').show()
+    $('.create_account.message_box').show()
   remove_message_type:=>
-    $('.message_box').removeClass 'success'
-    $('.message_box').removeClass 'error'
+    $('.create_account.message_box').removeClass 'success'
+    $('.create_account.message_box').removeClass 'error'

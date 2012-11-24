@@ -1,6 +1,6 @@
 class App.Views.Login.Index extends Backbone.View
   events:
-    'click .submit': 'try_submit'
+    'click .login.submit': 'try_submit'
   initialize:->
     @model = new App.Models.Session
     @render()
@@ -15,27 +15,30 @@ class App.Views.Login.Index extends Backbone.View
 	<p>Password:</p>
 	<input type="password" class="form_input password" />
 	<br/>
-	<div class="submit">submit</div>
+	<div class="login submit">submit</div>
       </div>
     '''
     html = Mustache.render template, null 
     $(@el).html html
   try_submit:=>
-    username = $('.username').val()
-    password = $('.password').val()
-    @model.save {username: username, password: password},
+    data = 
+      username : $('.username').val()
+      password : $('.password').val()
+    @model.save data,
       success: @post_submit
   post_submit:=>
+    console.log "post_submit"
     authenticated = @model.is_logged_in()
     if authenticated 
       @redirect_home()
     else
+      console.log "elseeeeeeeeeeeeeeeeeee"
       $('.login.message_box').addClass 'error'
       $('.login.message_box').html @model.error_message
       @show_message_box()
   hide_message_box:=>
-    $('.message_box').hide()
+    $('.login.message_box').hide()
   show_message_box:=>
-    $('.message_box').show()
+    $('.login.message_box').show()
   redirect_home:=>
     window.location.replace '/'

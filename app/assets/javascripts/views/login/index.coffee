@@ -10,8 +10,8 @@ class App.Views.Login.Index extends Backbone.View
       <div class="login_form">
         <h1>Log In</h1>
 	<div class="login message_box"></div>
-        <p>Username:</p>
-        <input type="text" class="form_input username" />
+        <p>Email:</p>
+        <input type="text" class="form_input email" />
 	<p>Password:</p>
 	<input type="password" class="form_input password" />
 	<br/>
@@ -22,7 +22,7 @@ class App.Views.Login.Index extends Backbone.View
     $(@el).html html
   try_submit:=>
     data = 
-      username : $('.username').val()
+      email    : $('.email').val()
       password : $('.password').val()
     @model.save data,
       success: @post_submit
@@ -32,7 +32,6 @@ class App.Views.Login.Index extends Backbone.View
     if authenticated 
       @redirect_home()
     else
-      console.log "elseeeeeeeeeeeeeeeeeee"
       $('.login.message_box').addClass 'error'
       $('.login.message_box').html @model.error_message
       @show_message_box()

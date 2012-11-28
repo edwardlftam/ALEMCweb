@@ -33,7 +33,7 @@ body {
     min-height: 700px;
   }
 
-  .login_form {
+  .login_form, .forgot_password_form  {
     width: 400px; 
     margin: 150px 50px 100px 150px;
   }
@@ -43,8 +43,9 @@ body {
     width: 500px;
     margin: 100px 50px 100px 100px;
   }
+  
 
-  .login_form, .create_account_form {
+  .login_form, .create_account_form, .forgot_password_form {
     position: relative;
     font-size: 1.3em;
     color: navy;
@@ -56,14 +57,21 @@ body {
       display: inline-block;
       padding: 10 10 10 0;
     }
+
+    .note {
+      font-size: 0.8em;
+      background-color: Aliceblue;
+      border: 2px navy solid;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 15 0 15 0;
+    }
   
     .message_box {
       padding: 20px;
       margin: 10 0 10 0;
       border-radius: 10px;
       border: 2px solid;
-
-
     }
 
     .error {
@@ -87,6 +95,7 @@ body {
     display: inline-block;
     border-radius: 5px;
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 5 10 5 10;
     background-color: navy;
     background-image: -webkit-gradient(linear, bottom, top, from(navy), to(skyblue)); 

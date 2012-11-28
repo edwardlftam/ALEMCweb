@@ -16,6 +16,8 @@ class App.Views.Login.Index extends Backbone.View
 	<input type="password" class="form_input password" />
 	<br/>
 	<div class="login submit">submit</div>
+	<br />
+	<a href="#forgot_password">Forgot Password?</a>
       </div>
     '''
     html = Mustache.render template, null 

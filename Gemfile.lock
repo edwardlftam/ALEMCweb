@@ -118,6 +118,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   haml
   jquery-rails
+  mail
   mysql2
   pg
   rabl

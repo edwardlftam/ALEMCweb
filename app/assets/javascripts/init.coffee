@@ -4,6 +4,7 @@ window.App =
     Home: {}
     Login: {}
     CreateAccount: {}
+    ForgotPassword: {}
   Routers:
     Application: {}
   Models: 
@@ -11,9 +12,9 @@ window.App =
   Collections: {}
 window.NavData =
   Home:
-  	className:'home'
-  	name:'首頁'
-  	url:''
+    className:'home'
+    name:'首頁'
+    url:''
   AboutUs:
     className:'about_us'
     name: '關於我們'

@@ -9,6 +9,8 @@ class SessionsController < ApplicationController
     if user and user.authenticate(@password)
       @remember_token = user.remember_token
       @username       = user.username
+      @admin          = user.administrator
+      logger.debug @admin.to_s
     else
       @error = "Invalid username/password combination."
     end

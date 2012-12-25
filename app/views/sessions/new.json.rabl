@@ -11,3 +11,7 @@ end
 code :error do
   @error
 end
+
+code :admin do
+  @admin
+end

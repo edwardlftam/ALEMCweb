@@ -8,6 +8,9 @@ class App.Views.Application.Layout extends Backbone.View
     @user = new App.Models.Session()
     authenticated = @user.is_logged_in()
     if authenticated
-      new App.Views.Application.ServiceBar el: '.account_bar'
+      if @user.admin
+        new App.Views.Admin.AdminBar el: '.account_bar'
+      else
+        new App.Views.Application.ServiceBar el: '.account_bar'
     else
       new App.Views.Application.Login el: '.account_bar'

@@ -29,9 +29,9 @@ class App.Views.Login.Index extends Backbone.View
     @model.save data,
       success: @post_submit
   post_submit:=>
-    console.log "post_submit"
     authenticated = @model.is_logged_in()
     if authenticated 
+      console.log "post_submit"
       @redirect_home()
     else
       $('.login.message_box').addClass 'error'

@@ -7,6 +7,7 @@ class App.Models.Session extends Backbone.Model
   load_session:=>
     @remember_token = $.cookie 'remember_token'
     @username       = $.cookie 'username'
+    @admin          = $.cookie 'admin'
   is_logged_in:=>
     @remember_token != null
   parse:(response)=>
@@ -16,5 +17,9 @@ class App.Models.Session extends Backbone.Model
     $.cookie 'username', response.username,
       path    : '/'
       expires : 1
+    $.cookie 'admin', response.admin,
+      path    : '/'
+      expires : 1
+    console.log response.admin  
     @load_session()
     @error_message  = response.error

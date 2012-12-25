@@ -1,10 +1,11 @@
 window.App = 
   Views: 
-    Application: {}
-    Home: {}
-    Login: {}
-    CreateAccount: {}
-    ForgotPassword: {}
+    Application    : {}
+    Home           : {}
+    Login          : {}
+    CreateAccount  : {}
+    ForgotPassword : {}
+    Admin          : {}
   Routers:
     Application: {}
   Models: 
